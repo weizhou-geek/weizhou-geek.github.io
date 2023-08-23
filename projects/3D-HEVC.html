@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>The IMCL 3D-HEVC Stereo Video Quality Database</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container scrollspy" id="home">
+
+      <h4 class="header center black-text">3D-HEVC Video Quality Assessment: <br> Database and Bitstream Model</h4>
+
+      <br>
+
+      <div class="row center">
+        <h5 class="header col s3">
+          <div class="author"><a href="http://home.ustc.edu.cn/~weichou/" target="blank">Wei Zhou</a></div>
+          <div class="school"><a href="http://www.ustc.edu.cn/" target="blank">USTC</a></div>
+        </h5>
+		<h5 class="header col s3">
+          <div class="author"><a href="" target="blank">Ning Liao</a></div>
+          <div class="school"><a href="http://www.ustc.edu.cn/" target="blank">USTC</a></div>
+        </h5>
+        <h5 class="header col s3">
+          <div class="author"><a href="http://staff.ustc.edu.cn/~chenzhibo/" target="blank">Zhibo Chen</a></div>
+          <div class="school"><a href="http://www.ustc.edu.cn/" target="blank">USTC</a></div>
+        </h5>
+        <h5 class="header col s3">
+          <div class="author"><a href="http://dsxt.ustc.edu.cn/zj_ywjs.asp?zzid=1565" target="blank">Weiping Li</a></div>
+          <div class="school"><a href="http://www.ustc.edu.cn/" target="blank">USTC</a></div>
+        </h5>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row center">
+        <div class="col s12">
+          <img class="responsive-img" src="images/content.png">
+        </div>
+      </div>
+
+    </div>
+
+    <br>
+
+    <div class="row section scrollspy" id="abstract">
+      <div class="title"><b>Abstract</b></div>
+      <p align="justify">Visual Quality Assessment of 3D/stereoscopic video (3D VQA) is significant for both quality monitoring and optimization of the existing 3D video services. In this paper, we build a 3D video database based on the latest 3D-HEVC video coding standard, to investigate the relationship among video quality, depth quality, and overall quality of experience (QoE) of 3D/stereoscopic video. We also analyze the pivotal factors to the video and depth qualities. Moreover, we develop a No-Reference 3D-HEVC bitstream-level objective video quality assessment model, which utilizes the key features extracted from the 3D video bitstreams to assess the perceived quality of the stereoscopic video. The model is verified to be effective on our database as compared with widely used 2D Full-Reference quality metrics as well as a state-of-the-art 3D FR pixel-level video quality metric.</p>
+    </div>
+
+	<div class="row section scrollspy" id="download">
+      <div class="title"><b>Downloads</b></div>
+        <div class="col s4 center">
+          <a href="../papers/16_QoMEX.pdf" target="_blank">
+            <img src="images/icon_pdf.png" width="80" height="80">
+          </a>
+          <br>
+          <a href="../papers/16_QoMEX.pdf" target="_blank">Paper</a>
+        </div>
+
+        <div class="col s4 center">
+          <a href="../database/IMCL_3D-HEVC_data.zip" target="_blank">
+            <img src="images/icon_zip.png" width="80" height="80">
+          </a>
+          <br>
+          <a href="../database/IMCL_3D-HEVC_data.zip" target="_blank">Subjective Data</a>
+        </div>
+    </div>
+
+	<div class="row">
+      <div class="subtitle"><b>Bibtex</b></div>
+      <pre>
+@inproceedings{zhou20163d,
+  title={{3D-HEVC} visual quality assessment: Database and bitstream model},
+  author={Zhou, Wei and Liao, Ning and Chen, Zhibo and Li, Weiping},
+  booktitle={Quality of Multimedia Experience (QoMEX), 2016 Eighth International Conference on},
+  pages={1--6},
+  year={2016},
+  organization={IEEE}
+}</pre>
+    </div>
+
+    <div class="row section scrollspy" id="database">
+      <div class="title"><b>Database Descriptions</b></div>
+	  <br>
+	  <div class="subtitle">- Processing Conditions</div>
+      <br>
+      <div class="row center">
+        <div class="col s12">
+		  <h5 align="center">Hypothetic Reference Circuits (HRCs)</h5>
+          <a class="materialboxed"><img class="responsive-img" src="images/HRCs.png" height="50%" width="50%"></a>
+        </div>
+	   </div>
+
+	  <br>
+      <div class="subtitle">- Database Analysis</div>
+      <br>	   
+	   <div class="row center">
+        <div class="col s12">
+		  <h5 align="center">Correlation between the quality dimensions</h5>
+          <a class="materialboxed"><img class="responsive-img" src="images/correlation.png" height="50%" width="50%"></a>
+        </div>
+      </div>
+    </div>
+
+	<div class="section row scrollspy" id="results">
+      <div class="title"><b>Results</b></div>
+      <br>
+      <div class="subtitle">- Proposed Model</div>
+      <br>
+      <div class="row center">
+        <div class="col s12">
+          <a class="materialboxed"><img class="responsive-img" src="images/model.png" height="50%" width="50%"></a>
+          <h5 align="center">The block diagram of the proposed NR VQA model</h5>
+        </div>
+	   </div>
+
+      <br>
+      <div class="subtitle">- Performance Comparisons</div>
+      <br>	   
+	   <div class="row center">
+        <div class="col s12">
+		  <h5 align="center">SROCC performance of pixel-level FR metrics on our IMCL 3D-HEVC database</h5>
+          <a class="materialboxed"><img class="responsive-img" src="images/SROCC.png" height="50%" width="50%"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<div class="row center">
+	<script type="text/javascript" src="//ra.revolvermaps.com/0/0/8.js?i=04p8z2o3eyz&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;s=170" async="async"></script>
+	</div>
+  <footer class="page-footer white">
+    <div class="footer-copyright center black-text">
+      Copyright &#169; 2016
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

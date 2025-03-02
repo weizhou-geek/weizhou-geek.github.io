@@ -1,0 +1,774 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+  <!--   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>The 1st International Workshop on Multimedia Computing for Health and Medicine</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/img/logo/mm2024.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="assets/css/styles.css" rel="stylesheet" />
+    <link href="assets/css/mycss.css" rel="stylesheet" />
+    <script>
+        // 检测窗口宽度并添加或移除元素
+        function toggleElementBasedOnWidth() {
+            const minWidth = 1024; // 最小宽度阈值
+            const elementId = 't'; // 要操作的元素的 ID
+            const element = document.getElementById(elementId);
+            const currentWidth = window.innerWidth; // 获取当前窗口宽度;
+            if (currentWidth < minWidth) {
+                // 如果窗口宽度小于最小宽度且元素存在，则移除元素
+                element.style.display='none'
+            } else if (currentWidth >= 1024) {
+                // 如果窗口宽度大于或等于最小宽度且元素不存在，则添加元素
+              
+                element.style.display='flex'
+            }
+        }
+
+        // 监听窗口大小变化事件
+        window.addEventListener('resize', toggleElementBasedOnWidth);
+        document.addEventListener('DOMContentLoaded', toggleElementBasedOnWidth);
+        // 页面加载时执行一次检查
+        toggleElementBasedOnWidth();
+    </script>
+    <style>
+        hr {
+            border: none;
+            left: 0;
+            width: 50%;
+            height: 1px;
+            background-color: #ffffff; /* 横线的颜色 */
+            margin-top: 2px; /* 上边距 */
+            margin-bottom: 2px; /* 下边距 */
+        }
+        .div-background {
+            margin:0px;
+            background: url('assets/img/mel_tram.c8ee93c6.jpg') no-repeat;
+            background-size: cover !important; 
+            background-position: center 50% !important;
+        }
+        .MM_logo{
+            width: 20%;
+            mix-blend-mode: normal;
+        }
+        .aim_logo{
+            z-index: 1;
+            width: 12%;
+            mix-blend-mode: normal;
+        }
+        .aiac_logo{
+            width: 15%;
+            mix-blend-mode: multiply;
+        }
+        .rose_logo{
+            width: 12%;
+            mix-blend-mode: multiply;
+            /* multiply是混合模式，rgb相乘。normal是rgb叠加。 */
+            /* mix-blend-mode: multiply; */
+        }
+        #submit{
+            background-color: skyblue;
+            vertical-align: middle; /* 垂直居中对齐 */
+            border: none;
+            margin-left: 10px; /* 文本和按钮之间的距离 */
+            color:white;
+            border-radius: 8px;
+        }
+        .avatar1 {
+            object-fit: cover; 
+            object-position: center 20%;
+        }
+        .avatar2 {
+            object-fit: cover; 
+            object-position: center 20%;
+        }
+        .avatar3 {
+            object-fit: cover;
+            object-position: center 20%;
+        }
+        .avatar4 {
+            object-fit: cover;
+            object-position: center 10%;
+        }
+        .avatar5 {
+            object-fit: cover;
+            object-position: center 20%;
+        }
+        .avatar6 {
+            object-fit: cover; 
+            object-position: center 15%;
+        }
+        .image-container img {
+            width: 50%; 
+            /* height: 100%;  */
+            object-fit: contain; 
+        }
+        .navlogo {
+            width: 10%;
+        }
+        #logo-nav-bar {
+            width: 100%;
+        }
+        
+       
+        
+        
+        /* .image-container::after {
+            content: ""; 
+            display: block;
+            width: 12rem;
+            height: 1px;
+            background: #fff;
+            position: relative;
+            bottom: -1px;
+        } */
+        @media (min-width: 576px){
+            .col-sm-3{
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            .col-sm-4{
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            .col-lg-3 {
+                max-width: 100%;
+            }
+        }
+        @media (min-width: 768px){
+            .col-sm-3{
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            .col-sm-4{
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            .col-lg-3 {
+                max-width: 100%;
+            }
+        }
+        @media (min-width: 1024px){
+            .col-sm-3{
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+            .col-sm-4{
+                flex: 0 0 33%;
+                max-width: 33%;
+            }
+            .col-lg-3 {
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 1024px){
+            .navlogo{
+                display: grid; 
+                width: 100%;
+                grid-template-columns: 1fr 3fr;
+            }
+            .buttonstyle{
+                display: flex;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+        @media (max-width: 1024px) {
+        #logo-nav-bar {
+            display: none;
+        }
+    }
+    </style>
+</head>
+
+
+<body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="navlogo">
+            <div class="buttonstyle">
+                <button
+                    style="background-color: #006699 !important;"   
+                    class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
+                    type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+                <!-- <div class="image-container"> -->
+                    <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top"> -->
+                        <img id="logo-nav-bar" src="assets/img/logo/mm2024.png" alt="">
+                    <!-- </a> -->
+                <!-- </div> -->
+                <!-- <hr> -->
+                <!-- <p style="color: #ffffff;font: 0.3rem;">Trustworthy Visual Data Processing</p> -->
+        </div>
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#topics" id="CallforPapers">Call for Papers</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#paper" id="Programme">Programme</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="#schedule">IMPORTANT DATES</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="#submission" id="Submission">Submission</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="#speakers">Keynotes</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="#SteeringCommittee">Program Committee</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="#GeneralChairs">Organizers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Masthead -->
+    <header style="background-color: rgb(255, 255, 255) !important;width: 100vw;" class="masthead bg-primary text-white text-center div-background">
+        <!-- <div class="container d-flex align-items-center flex-column"> -->
+            <!-- MM的背景图有些看不清楚，加了黑色底色。但是图片还是有些看不清楚。删除黑色底色用上面的注释的div class -->
+        <div style="background-color: rgba(0,0,0,0.5); padding: 2rem;" class="container d-flex align-items-center flex-column">
+
+            <!-- Masthead Heading -->
+            <h1 class="masthead-heading mb-0">The 1st International Workshop on Multimedia Computing for Health and Medicine</h1>
+
+            <!-- Masthead Subheading -->
+            <p class="masthead-subheading font-weight-light mb-0">
+                Co-located with 2024 ACM Multimedia (ACM MM 2024)
+                <br/>
+                28 October - 1 November 2024, Melbourne, Australia
+                <br />
+            </p>
+            <!-- <div style="padding-bottom: 5rem;"> -->
+                <!-- <img src="assets/img/logo/mm2024.png" class="MM_logo" alt="MM_logo"> -->
+                <!-- <br> -->
+<!--                 <img src="assets/img/logo/aim_logo.png" class="aim_logo" alt="aim_logo">
+                <img src="assets/img/logo/aiac_logo.jpg" class="aiac_logo" alt="aiac_logo">
+                <img src="assets/img/logo/rose_logo.jpg" class="rose_logo" alt="rose_logo"> -->
+            <!-- </div> -->
+        </div>
+    </header>
+    <section class="page-section portfolio bg-light" id="">
+        <div class="container">
+            <!-- About Section Heading -->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">overview</h2>
+
+            <!--<h3>Topics</h3>-->
+            <p class="lead text-justify">
+                In health and medicine, an immense amount of data is being generated by distributed sensors and cameras, as well as multimodal digital health platforms that support multimedia, such as audio, video, image, 3D geometry, and text. The availability of such multimedia data from medical devices and digital record systems has greatly increased the potential for automated diagnosis. The past several years have witnessed an explosion of interest, and a dizzyingly fast development, in computer aided medical investigations using MRI, CT, X-rays, images, point clouds etc. This proposed workshop focuses on various multimedia computing techniques (including mobile solutions and hardware solutions) for health and medicine, which targets real-world data/problems in healthcare, involves a large number of stakeholders, and is closely connected with people's health.  
+                <br />
+        </div>
+    </section>
+    <section class="page-section portfolio bg-transparent" id="topics">
+        <div class="container">
+            <!-- About Section Heading -->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">Scope and Topics</h2>
+
+            <!--<h3>Topics</h3>-->
+            <p class="lead text-justify">
+                This workshop focuses on various computing techniques (including mobile solutions and hardware solutions) for health and medicine. The topics of interest include (but are not limited to) the following: 
+                <br />
+                <ul class="lead">
+                    <li>Digital twins for health and medicine</li>
+                    <li>Digital persons for health and medicine</li>
+                    <li>Developing better deep learning based debugging methods and tools</li>
+                    <li>Intelligent medical and health systems</li>
+                    <li>Novel theories and methods of deep learning for medical imaging</li>
+                    <li>Drug discovery with deep learning</li>
+                    <li>Pandemic (e.g., COVID-19) management with deep learning</li>
+                    <li>Health and medical behavior analytics with deep learning</li>
+                    <li>Medical visual question and answering</li>
+                    <li>Un/self/semi/weakly/fully-supervised medical data (text/images)</li>
+                    <li>Graph learning on medical data (text/images)</li>
+                    <li>Generating diagnostic reports from medical images</li>
+                    <li>Fewer Labels in clinical informatics</li>
+                    <li>Summarization of clinical information</li>
+                    <li>Knowledge transfer under various clinical environments</li>
+                    <li>Multimodal medical image analysis</li>
+                    <li>Medical image registration</li>
+                    <li>Organ and lesion segmentation/detection</li>
+                    <li>Image classification with MRI/CT/PET</li>
+                    <li>Medical image enhancement/denoising</li>
+                    <li>Learning robust medical image representation with noisy annotation</li>
+                    <li>Predicting clinical outcomes from multimodal medical data</li>
+                    <li>Anomaly detection in medical images</li>
+                    <li>Active Learning and Life-long Learning in Medical computer vision</li>
+                    <li>User/patient psychometric modeling from video, image, audio, and text</li>
+                    <li>Medical foundation models (FMs)</li>
+                    <li>Transfer learning and model fine-tuning for medical data</li>
+                    <li>Activity detection or recognition on medical sequential data (e.g., surgical videos, EEG)</li>
+                    <li>Sequential pattern recognition of medical data (e.g., surgical videos, EEG, MRI/CT)</li>
+                    <li>Image/video/language/audio decoding from medical data (e.g., MRI and EEG)</li>
+                    <li>Medical dataset and benchmark contribution</li>
+                    <li>Medical data synthesis</li>
+                    <li>Medical data augmentation</li>
+                    <li>Model robustness in medical data analysis</li>
+                    <li>Model trustworthiness and explainability in medical data analysis</li>
+                    <li>Ethical considerations on AI for medical data analysis</li>
+                    
+                </ul>
+        </div>
+    </section>
+
+    <section class="page-section portfolio bg-light" id="paper">
+
+
+        <div class="container">
+
+            <!-- About Section Heading -->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">programme</h2>
+
+
+            <!--<h3>Topics</h3>-->
+
+            <div class="lead text-justify">
+                <iframe src="assets/MCHM_Programme_final.pdf" width="100%" height="1200px" style="border:none;"></iframe>
+            </div>
+            
+        </div>
+    </section>
+    <!-- <section class="page-section portfolio bg-light" id="relevance">
+
+
+        <div class="container">
+
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">Relevance to ACM Multimedia 2023</h2>
+
+            <p class="lead text-justify">
+
+                The proposed Workshop will focus on the different aspects of industry multimedia computing and measurements with advanced artificial intelligence models, i.e., deep learning, natural language processing, semantic analysis, and pattern recognition. It provides an opportunity for input from multimedia computing-oriented researchers and those from the industry. To the best of our knowledge, this topic has not yet been the central focus of any of the ACM MM workshops. The particular scope of the suggested workshop falls well within the scope of the ACM MM 2023 and would benefit its reader audience. The reputation and popularity of the ACMM MM conference will definitely contribute to the synergy between this and adjacent or complementary fields.
+
+                
+            </p>
+        </div>
+    </section> -->
+
+    <!-- <section class="page-section bg-light" id="accepted-papers">
+
+
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">Accepted Papers</h2>
+
+            <h3 class="text-center text-uppercase my-2">Full Papers</h3>
+            <ul>
+                <li><b>Graph2Feat: Inductive Link Prediction via Knowledge Distillation.</b> Ahmed E. Samy, Zekarias T. Kefato and Sarunas Girdzijauskas; (Representation) <a href="" target="_blank" style="color: lightgray;">read paper <i class="fas fa-file-pdf"></i> (available soon)</a></li>
+                <li><b>Assessing Scientific Contributions in Data Sharing Spaces.</b> Kacy Adams, Fernando Spadea, Conor Flynn and Oshani Seneviratne; (Assessment) <a href="https://arxiv.org/abs/2303.10476" target="_blank">read paper <i class="fas fa-file-pdf"></i></a></li>
+                <li><b>A New Annotation Method and Dataset for Layout Analysis of Long Documents.</b> Aman Ahuja, Kevin Dinh, Brian Dinh, William A. Ingram and Edward Fox; (Representation) <a href="" target="_blank" style="color: lightgray;">read paper <i class="fas fa-file-pdf"></i> (available soon)</a></li>
+                <li><b>Towards InnoGraph: A Knowledge Graph for AI Innovation.</b> M.Besher Massri, Blerina Spahiu, Marko Grobelnik, Vladimir Alexiev, Matteo Palmonari and Dumitru Roman; (Representation) <a href="https://zenodo.org/record/7750707#.ZBd9vHbMISE" target="_blank">read paper <i class="fas fa-file-pdf"></i></a></li></ul>
+
+            <h3 class="text-center text-uppercase my-2">Short Papers</h3>
+            <ul>
+                <li><b>Graph Embedding for Mapping Interdisciplinary Research Networks.</b> Eoghan Cunningham and Derek Greene; (Representation) <a href="https://arxiv.org/abs/2302.01826" target="_blank">read paper <i class="fas fa-file-pdf"></i></a></li>
+                <li><b>Cross-Team Collaboration and Diversity in the Bridge2AI Project.</b> Huimin Xu, Chitrank Gupta, Zhandos Sembay, Swathi Thaker, Pamela Payne-Foster, Jake Chen and Ying Ding; (Assessment) <a href="" target="_blank" style="color: lightgray;">read paper <i class="fas fa-file-pdf"></i> (available soon)</a></li>
+                <li><b>NASA Science Mission Directorate Knowledge Graph Discovery.</b> Roelien C. Timmer, Megan Mark, Fech Scen Khoo, Marcella Scoczynski Ribeiro Martins, Anamaria Berea, Greg Renard, Kaylin Bugbee and Emily Foshee; (Representation) <a href="https://arxiv.org/abs/2303.10871" target="_blank">read paper <i class="fas fa-file-pdf"></i></a></li>
+                <li><b>Scientific Data Extraction from Oceanographic Papers.</b> Bartal Eyðfinsson Veyhe, Tomer Sagi and Katja Hose; (Discoverability) <a href="" target="_blank" style="color: lightgray;">read paper <i class="fas fa-file-pdf"></i> (available soon)</a></li>
+                <li><b>hp-frac: An index to determine Awarded Researchers.</b> Aashay Singhal and Kamalakar Karlapalem; (Assessment) <a href="" target="_blank" style="color: lightgray;">read paper <i class="fas fa-file-pdf"></i> (available soon)</a></li>
+                <li><b>Application of an ontology for model cards to generate computable artifacts for linking machine learning information from biomedical research.</b> Muhammad Amith, Licong Cui, Kirk Roberts and Cui Tao; (Discoverability) <a href="https://arxiv.org/abs/2303.11991" target="_blank">read paper <i class="fas fa-file-pdf"></i></a></li>
+            </ul>
+        </div>
+    </section> -->
+
+
+    <!-- <section class="page-section portfolio bg-light" id="significance">
+
+
+        <div class="container">
+
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">Significance</h2>
+
+            <p class="lead text-justify">
+
+                Considering the significance of multimedia computing for smart manufacturing, this workshop will be a timely platform to bring together researchers to further explore innovative multimedia computing methods for intelligent industry applications in the era of Industry 5.0. The significance of this workshop is to bring the latest theoretical and practical advancements in artificial intelligence, the Internet of things, 5G, image processing, and big data to the field of multimedia. With the support of advanced multimedia computing technologies, the significant insights and knowledge hidden behind industry sensors can be capitalized for process optimization, anomaly detection, energy management, and so on. We must try our best to mine and extract knowledge out of industry multimedia big data through a series of intelligent technologies and methods, including sensor data planning, acquisition, preprocessing, storage, analytical mining, visualization, and intelligent control. It is expected that the workshop will provide many new ideas for industry multimedia computing processing which are very important for the development of the future world. The sooner we start this workshop, the better for the construction industry, local communities, and society in general.
+                
+            </p>
+        </div>
+    </section> -->
+    <section class="page-section bg-transparent mb-0" id="schedule">
+
+        <div class="container">
+
+            <h2 class="page-section-heading text-center text-uppercase  mb-5">KEY DATES FOR WORKSHOP</h2>
+            <br>
+            <ul class="lead text-justify">
+                <li>Workshop paper submission deadline: <b style="color: red;">July 29, 2024 (New)</b></li>
+                <br>
+                <li>Workshop paper notification: <b style="color: red;"> August 12, 2024 (New)</b></li>
+                <br>
+                <li>Workshop paper camera-ready: <b>August 19, 2024</b></li>
+                <br>                
+            </ul>
+
+        </div>
+    </section>
+
+    <section class="page-section portfolio bg-light" id="submission">
+
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">Submission</h2>
+        <div class="container">
+            <ul class="lead">
+                <li>We invite submissions of original research papers addressing but not limited to the topics as listed above. Submissions should adhere to the ACM Multimedia 2024 formatting guidelines and will undergo a rigorous peer-review process. Accepted papers will be presented at the workshop and included in the ACM Digital Library. We also welcome submissions of demos, datasets, and position papers that contribute to the workshop's themes. 
+                The template can be found via:<a href="https://2024.acmmm.org/files/ACM-MM24-paper-templates.zip"><button id="submit">Template</button></a></li>
+                <p></p>
+                <!-- <li><b>Deadline</b>: <span style="color:red;">19 August 2024 (Anywhere on Earth)</span></li><p></p> -->
+                <!-- <li>Paper length: The same format & template as the main conference, but the manuscript's length is limited to one of the two options: a) 4 pages plus 1-page reference; or b) 8 pages plus up to 2-page reference.</li> -->
+                <li>Page limits:</li>
+                <ul>
+                    <li>Workshop full papers: 8 page limit + 2 extra pages for references only, no presentation video</li>
+                    <li>Workshop short papers: 4 page limit + 1 extra page for references only, no presentation video</li>
+                </ul>
+                <p></p>
+                <li>Papers have to be submitted via: <a href="https://openreview.net/group?id=acmmm.org/ACMMM/2024/Workshop/MCHM"><button id="submit">Submit a Paper</button></a></li>
+                
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section bg-da mb-0" id="speakers">
+        <div class="container-sm">
+
+            <h2 class="page-section-heading text-center text-uppercase">Keynote Speakers</h2>
+            <br>
+            <!-- <p class="lead"><b>Tentative Invited Speakers：</b></p> -->
+                <div class="col-lg-3 team-member team-layout d-flex mt-5">
+                    <div class="team-image">
+                        <img class="mx-auto rounded-circle avatar1" src="assets/img/team/Wei Chen.jpg" alt="">
+                        <h4>Wei Chen</h4>
+
+                    </div>
+                    <div class="team-profile text-justify">
+                        <p><b>Prof. Wei Chen</b> is Head of School of Biomedical Engineering and Professor at the University of Sydney, Australia. She is the Associate Editor of various IEEE journals and the newly elected IEEE EMBS AdCom Asia/Pacific representative. From 2020 to 2022, she was the Chair of IEEE Sensor and Systems Council China Chapter and Managing Editor of IEEE Reviews in Biomedical Engineering. She has published 2 books, 200+ scientific papers, holds 20+ granted patents, and led 10+ important R&D projects. Her research focuses on biomedical sensor systems and health informatics.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 team-member team-layout d-flex">
+                    <div class="team-image">
+                        <img class="mx-auto rounded-circle avatar1" src="assets/img/team/Luping Zhou.png" alt="">
+                        <h4>Luping Zhou</h4>
+                    </div>
+                    <div class="team-profile text-justify">
+                        <p><b>Dr Luping Zhou</b> is an Associate Professor in School of Electrical and Information Engineering, the University of Sydney. She obtained her PhD from Australian National University and got her post-doctoral training in University of North Carolina at Chapel Hill. Dr. Zhou works on the interface of medical image analysis, machine learning, and computer vision, and has published 100+ research papers in these fields. Her current research is focused on medical image analysis with statistical graphical models and deep learning, as well as general visual recognition problems. She was a recipient of the prestigious ARC DECRA award. Dr. Zhou is the Associate Editor of the journals IEEE Trans. on Medical Imaging and Pattern Recognition.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 team-member team-layout d-flex">
+                    <div class="team-image">
+                        <img class="mx-auto rounded-circle avatar1" src="assets/img/team/Hamid Laga.png" alt="">
+                        <h4>Hamid Laga</h4>
+                    </div>
+                    <div class="team-profile text-justify">
+                        <p><b>Dr Hamid Laga</b> is a Professor in Murdoch University, Australia. His main expertise is in Machine Learning, 3D Computer Vision, and Computer Graphics. While his primary focus is on fundamental research, he undertakes cross-disciplinary and translational research across health and agriculture. He also provides consultancy services to industries and companies interested in translating research outcomes to end-user products.</p>
+                    </div>
+                </div>
+            
+            <!-- <ul class="lead"> -->
+                <!-- <li>Houbing Song, Fellow IEEE, University of Maryland, Baltimore County  (UMBC), USA.  Title: AI/Machine Learning for Internet of Dependable and Controllable Things</li> -->
+                <!-- <br> -->
+                <!-- <li><b>Dr. Wei Chen</b>, Professor at the School of Biomedical Engineering, University of Sydney.</li>
+                <br>
+                <li><b>Dr. Luping Zhou</b>, Associate Professor at the School of Electrical and Information Engineering, University of Sydney.</li>
+                <br>
+                <li><b>Dr. Hamid Laga</b>, Professor at Murdoch University, Australia.</li>
+                <br>
+                <br>
+            </ul> -->
+        </div>
+    </section>
+
+
+    <section class="page-section bg-light mb-0" id="SteeringCommittee">
+
+        <div class="container">
+
+            <h2 class="page-section-heading text-center text-uppercase mb-5">Program Committee</h2>
+
+            <br>
+            <ul class="lead text-justify">
+                <li><b>Jie Yang</b>, Harvard University, USA</li><br>
+                <li><b>Chiranjibi Sitaula</b>, University of Melbourne, Australia</li><br>
+                <li><b>Lydia Cui</b>, La Trobe University, Australia</li><br>
+                <li><b>Yanming Zhu</b>, Griffith University, Australia</li><br>
+                <li><b>Xin Tan</b>, East China Normal University, China</li><br>
+                <li><b>Shasha Mao</b>, Xidian University, China</li><br>
+                <li><b>Lei Lv</b>, Shandong Normal University, China</li><br>
+                <li><b>Shuiqiao Yang</b>, Commonwealth Scientific and Industrial Research Organisation (CSIRO), Australia</li><br>
+                <li><b>Kan Chen</b>,Singapore Institute of Technology, Singapore</li><br>
+                <li><b>Will Pan</b>,  OPT Machine Vision, China</li><br>
+                <li><b>Fang-Lue Zhang</b>, Victoria University of Wellington, New Zealand</li><br>
+                <li><b>Kyle Wang</b>,  Volpara Health, New Zealand</li><br>
+            </ul>
+        </div>
+
+        </div>
+    </section>
+
+    <section class="page-section bg-transparent mb-0" id="GeneralChairs">
+
+        <div class="container">
+
+            <h2 class="page-section-heading text-center text-uppercase mb-5">Workshop Organizers</h2>
+            <!-- <p class="text-center">Co-chairs for Sci-K 2023 (alphabetically)</p> -->
+            <br>
+            <div class="row mt-5">
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle avatar1" src="assets/img/team/xuequanlu.jpg" alt="">
+                        <h4>Xuequan Lu</h4>
+                        <p class="text-secondary">La Trobe University </br>Australia
+                        </p>
+                        <!-- <a class="btn btn-outline-secondary btn-social mx-1" href="https://sites.google.com/site/fanshaojing/"
+                            target="_blank">
+                            <i class="fas fa-home"></i>
+                        </a>
+                        <a class="btn btn-outline-secondary btn-social mx-1" href="mailto:dcsfs@nus.edu.sg"
+                            target="_blank">
+                            <svg t="1681180803353" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3223" width="200" height="200"><path d="M128 768V301.248l361.344 361.376a32.032 32.032 0 0 0 45.312 0L896 301.248V768H128z m384-173.248L173.248 256h677.504L512 594.752zM64 832h896V192H64v640z" fill="#2C3E50" p-id="3224"></path></svg>
+                        </a> -->
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle avatar3" src="assets/img/team/WenxiYue.png" alt="">
+                        <h4>Wenxi Yue</h4>
+                        <p class="text-secondary">University of Sydney </br>Australia</br>
+                        </p>
+                        <!-- <a class="btn btn-outline-secondary btn-social mx-1" href="https://wangzwhu.github.io/home/"
+                            target="_blank">
+                            <i class="fas fa-home"></i>
+                        </a>
+                        <a class="btn btn-outline-secondary btn-social mx-1" href="mailto:wangzwhu@whu.edu.cn"
+                            target="_blank">
+                            <svg t="1681180803353" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3223" width="200" height="200"><path d="M128 768V301.248l361.344 361.376a32.032 32.032 0 0 0 45.312 0L896 301.248V768H128z m384-173.248L173.248 256h677.504L512 594.752zM64 832h896V192H64v640z" fill="#2C3E50" p-id="3224"></path></svg>
+                        </a> -->
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle avatar4" src="assets/img/team/imran.jpg" alt="">
+                        <h4>Imran Razzak</h4>
+                        <p class="text-secondary">University of New South Wales </br>Australia</br>
+                        </p>
+                        <!-- <a class="btn btn-outline-secondary btn-social mx-1" href="https://rshaojimmy.github.io"
+                            target="_blank">
+                            <i class="fas fa-home"></i>
+                        </a>
+                        <a class="btn btn-outline-secondary btn-social mx-1" href="mailto:shaorui@hit.edu.cn"
+                            target="_blank">
+                            <svg t="1681180803353" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3223" width="200" height="200"><path d="M128 768V301.248l361.344 361.376a32.032 32.032 0 0 0 45.312 0L896 301.248V768H128z m384-173.248L173.248 256h677.504L512 594.752zM64 832h896V192H64v640z" fill="#2C3E50" p-id="3224"></path></svg>
+                        </a> -->
+                    </div>
+                </div>
+               
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle avatar5" src="assets/img/team/KunHu.png" alt="">
+                        <h4>Kun Hu</h4>
+                        <p class="text-secondary">University of Sydney</br>Australia</br>
+                        </p>
+                        <!-- <a class="btn btn-outline-secondary btn-social mx-1" href="http://songbai.site/"
+                            target="_blank">
+                            <i class="fas fa-home"></i>
+                        </a>
+                        <a class="btn btn-outline-secondary btn-social mx-1" href="mailto:songbai.site@gmail.com"
+                            target="_blank">
+                            <svg t="1681180803353" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3223" width="200" height="200"><path d="M128 768V301.248l361.344 361.376a32.032 32.032 0 0 0 45.312 0L896 301.248V768H128z m384-173.248L173.248 256h677.504L512 594.752zM64 832h896V192H64v640z" fill="#2C3E50" p-id="3224"></path></svg>
+                        </a> -->
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle avatar6" src="assets/img/team/jingleilv.jpg" alt="">
+                        <h4>Jinglei Lv</h4>
+                        <p class="text-secondary">University of Sydney</br>Australia</br>
+                        </p>
+                        <!-- <a class="btn btn-outline-secondary btn-social mx-1" href="https://hongyuanzhu.github.io/"
+                            target="_blank">
+                            <i class="fas fa-home"></i>
+                        </a>
+                        <a class="btn btn-outline-secondary btn-social mx-1" href="mailto:hongyuanzhu.cn@gmail.com "
+                            target="_blank">
+                            <svg t="1681180803353" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3223" width="200" height="200"><path d="M128 768V301.248l361.344 361.376a32.032 32.032 0 0 0 45.312 0L896 301.248V768H128z m384-173.248L173.248 256h677.504L512 594.752zM64 832h896V192H64v640z" fill="#2C3E50" p-id="3224"></path></svg>
+                        </a> -->
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle avatar6" src="assets/img/team/SenZhang.png" alt="">
+                        <h4>Sen Zhang</h4>
+                        <p class="text-secondary">University of Sydney</br>Australia</br>
+                            </br>
+                        </p>
+                        <!-- <a class="btn btn-outline-secondary btn-social mx-1" href="https://liqiangnie.github.io"
+                            target="_blank">
+                            <i class="fas fa-home"></i>
+                        </a>
+                        <a class="btn btn-outline-secondary btn-social mx-1" href="mailto:nieliqiang@gmail.com"
+                            target="_blank">
+                            <svg t="1681180803353" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3223" width="200" height="200"><path d="M128 768V301.248l361.344 361.376a32.032 32.032 0 0 0 45.312 0L896 301.248V768H128z m384-173.248L173.248 256h677.504L512 594.752zM64 832h896V192H64v640z" fill="#2C3E50" p-id="3224"></path></svg>
+                        </a> -->
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle avatar6" src="assets/img/team/Junhui Hou.jpg" alt="">
+                        <h4>Junhui Hou</h4>
+                        <p class="text-secondary">City University of Hong Kong</br>China</br>
+                            </br>
+                        </p>
+                        <!-- <a class="btn btn-outline-secondary btn-social mx-1" href="http://research.nii.ac.jp/~satoh/index.html"
+                            target="_blank">
+                            <i class="fas fa-home"></i>
+                        </a>
+                        <a class="btn btn-outline-secondary btn-social mx-1" href="mailto:satoh@nii.ac.jp"
+                            target="_blank">
+                            <svg t="1681180803353" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3223" width="200" height="200"><path d="M128 768V301.248l361.344 361.376a32.032 32.032 0 0 0 45.312 0L896 301.248V768H128z m384-173.248L173.248 256h677.504L512 594.752zM64 832h896V192H64v640z" fill="#2C3E50" p-id="3224"></path></svg>
+                        </a> -->
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle avatar6" src="assets/img/team/Zhiyong Wang.png" alt="">
+                        <h4>Zhiyong Wang</h4>
+                        <p class="text-secondary"> University of Sydney</br>Australia</br>
+                            </br>
+                        </p>
+                        <!-- <a class="btn btn-outline-secondary btn-social mx-1" href="http://research.nii.ac.jp/~satoh/index.html"
+                            target="_blank">
+                            <i class="fas fa-home"></i>
+                        </a>
+                        <a class="btn btn-outline-secondary btn-social mx-1" href="mailto:satoh@nii.ac.jp"
+                            target="_blank">
+                            <svg t="1681180803353" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3223" width="200" height="200"><path d="M128 768V301.248l361.344 361.376a32.032 32.032 0 0 0 45.312 0L896 301.248V768H128z m384-173.248L173.248 256h677.504L512 594.752zM64 832h896V192H64v640z" fill="#2C3E50" p-id="3224"></path></svg>
+                        </a> -->
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle avatar6" src="assets/img/team/Jiebo Luo.jpg" alt="">
+                        <h4>Jiebo Luo</h4>
+                        <p class="text-secondary">University of Rochester</br>USA</br>
+                            </br>
+                        </p>
+                        <!-- <a class="btn btn-outline-secondary btn-social mx-1" href="http://research.nii.ac.jp/~satoh/index.html"
+                            target="_blank">
+                            <i class="fas fa-home"></i>
+                        </a>
+                        <a class="btn btn-outline-secondary btn-social mx-1" href="mailto:satoh@nii.ac.jp"
+                            target="_blank">
+                            <svg t="1681180803353" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3223" width="200" height="200"><path d="M128 768V301.248l361.344 361.376a32.032 32.032 0 0 0 45.312 0L896 301.248V768H128z m384-173.248L173.248 256h677.504L512 594.752zM64 832h896V192H64v640z" fill="#2C3E50" p-id="3224"></path></svg>
+                        </a> -->
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle avatar6" src="assets/img/team/Wei Xiang.jpg" alt="">
+                        <h4>Wei Xiang</h4>
+                        <p class="text-secondary"> La Trobe University</br>Australia</br>
+                            </br>
+                        </p>
+                        <!-- <a class="btn btn-outline-secondary btn-social mx-1" href="http://research.nii.ac.jp/~satoh/index.html"
+                            target="_blank">
+                            <i class="fas fa-home"></i>
+                        </a>
+                        <a class="btn btn-outline-secondary btn-social mx-1" href="mailto:satoh@nii.ac.jp"
+                            target="_blank">
+                            <svg t="1681180803353" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3223" width="200" height="200"><path d="M128 768V301.248l361.344 361.376a32.032 32.032 0 0 0 45.312 0L896 301.248V768H128z m384-173.248L173.248 256h677.504L512 594.752zM64 832h896V192H64v640z" fill="#2C3E50" p-id="3224"></path></svg>
+                        </a> -->
+                    </div>
+                </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+
+                <!-- Footer Location -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                </div>
+
+                <!-- Footer Social Icons -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Follow MCHM-24 (updating)</h4>
+                    <!-- <a class="btn btn-outline-light btn-social mx-1" href="#">
+                           <i class="fab fa-fw fa-facebook-f"></i>
+                         </a> -->
+                    <!-- <a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/scik_workshop"
+                        target="_blank">
+                        <i class="fab fa-fw fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/groups/9300118/">
+                          <i class="fab fa-fw fa-linkedin-in"></i>
+                    </a> -->
+                    <!-- 
+                        <a class="btn btn-outline-light btn-social mx-1" href="#">
+                          <i class="fab fa-fw fa-dribbble"></i>
+                        </a> -->
+                </div>
+
+                <!-- Footer About Text -->
+                <div class="col-lg-3">
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright Section -->
+    <section class="copyright py-4 text-center text-white">
+        <div class="container">
+            <small>Copyright &copy; MCHM-24</small>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Contact form JS-->
+    <script src="assets/mail/jqBootstrapValidation.js"></script>
+    <script src="assets/mail/contact_me.js"></script>
+    <!-- Core theme JS-->
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/moment.js"></script>
+    <script src="assets/js/moment-timezone-with-data.js"></script>
+    <script src="assets/js/myjs.js"></script>
+</body>
+
+</html>

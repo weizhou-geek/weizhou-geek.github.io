@@ -85,18 +85,20 @@
   align-items: flex-start;
   gap: 12px;
   min-width: 1180px;
-  padding-top: 28px;
+  padding-top: 0;
 }
 
+/* horizontal axis */
 .wz-timeline::before {
   content: "";
   position: absolute;
   left: 5.4%;
   right: 5.4%;
-  top: 40px;
+  top: 26px;
   height: 3px;
   background: #94b6df;
   border-radius: 3px;
+  z-index: 0;
 }
 
 .wz-event {
@@ -104,12 +106,14 @@
   flex: 1 0 95px;
   min-width: 95px;
   text-align: center;
-  padding-top: 42px;
+  margin-top: 26px;
+  padding-top: 38px;
 }
 
+/* dot centered exactly on the axis */
 .wz-dot {
   position: absolute;
-  top: 40px;
+  top: 0;
   left: 50%;
   width: 14px;
   height: 14px;
